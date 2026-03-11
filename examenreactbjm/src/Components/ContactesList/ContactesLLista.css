@@ -1,0 +1,17 @@
+#llistaContactes{
+    background-color: darkseagreen;
+    grid-area: contactes;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    overflow-y: scroll;
+    scrollbar-color: aliceblue transparent;
+    scrollbar-width: thin;
+}
+.contacte{
+    width: 100%;
+    min-height: 120px;
+    background-color: white;
+}

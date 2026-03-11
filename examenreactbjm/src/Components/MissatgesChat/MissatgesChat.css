@@ -1,0 +1,49 @@
+#missatgesChat{
+    height: 100%;
+    width: 100%;
+    background-color: darkslategrey;
+    grid-area: missatges;
+    min-width: 600px;
+    display: grid;
+    grid-template-rows: 9fr 1fr;
+    grid-template-areas: "msgzone"
+                        "wzone";
+}
+#writeField{
+    background-color: white;
+    grid-area: wzone;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+}
+#writeField > input{
+    padding-left: 5px;
+    font-size: 200%;
+}
+#writeField > button{
+    background-color: darkcyan;
+}
+#writeField > button:hover{
+    background-color: darkblue;
+    color: white;
+}
+#missatges{
+    grid-area: msgzone;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px 0px 50px;
+    gap: 10px;
+    overflow-y: scroll;
+    scrollbar-color: aliceblue transparent;
+    scrollbar-width: thin;
+    min-height: 400px;
+    max-height: 700px;
+
+}
+.msg{
+    min-height: 30px;
+    max-width: 70%;
+    background-color: white;
+    min-width: 250px;
+    padding:20px;
+}
