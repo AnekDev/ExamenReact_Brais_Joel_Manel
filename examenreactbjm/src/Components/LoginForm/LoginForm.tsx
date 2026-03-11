@@ -1,7 +1,11 @@
 import "./LoginForm.css"
 import axios from "axios";
 import {useActionState} from "react";
-function LoginForm(){
+
+type Props = {
+    onLogin: () => void;
+}
+function LoginForm({onLogin} :Props){
 
     const action = async (_prevState: unknown, formData: FormData) => {
         const nomEscrit = formData.get("username") as string;
@@ -13,6 +17,10 @@ function LoginForm(){
         if (!res.data.error){
             return {ok: true, missatge: "Username o contrasenya Incorrectes"};
         }
+        setTimeout(() => {
+            onLogin()
+        }, 3000);
+
         return {ok: true, missatge: "Login Correcte..."};
     }
 
@@ -31,12 +39,13 @@ function LoginForm(){
                     <input type="password" name="contrasenya"/>
                 </div>
                 <button type="submit">Log In</button>
+                {state && (
+                    <p style={{color: state.ok ? "green" : "red"}}>
+                        {state.missatge}
+                    </p>
+                )}
             </form>
-            {state && (
-                <p style={{color: state.ok ? "green" : "red"}}>
-                    {state.missatge}
-                </p>
-            )}
+
         </div>
     );
 }

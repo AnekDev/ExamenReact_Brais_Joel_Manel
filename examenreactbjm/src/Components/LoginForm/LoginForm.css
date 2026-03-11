@@ -1,15 +1,16 @@
+
 #login{
     height: 65vh;
     width: 65vw;
-    background-color: wheat;
-    border:2px solid black;
-    border-radius: 1px;
+    background-color: #304878;
+    border:5px solid black;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    font-family: "Comic Sans MS", serif;
+    font-family: "Calibri", serif;
     font-size: 30px;
     min-height: 400px;
 
@@ -29,7 +30,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-
 }
 
 #login > input{

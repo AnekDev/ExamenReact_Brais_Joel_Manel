@@ -1,12 +1,12 @@
 
 import './App.css'
-import LoginForm from "./Components/LoginForm/LoginForm.tsx";
+import AppPrincipal from "./Components/AppPrincipal/AppPrincipal.tsx";
 
 function App() {
 
   return (
     <>
-      <LoginForm></LoginForm>
+      <AppPrincipal></AppPrincipal>
     </>
   )
 }

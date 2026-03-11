@@ -1,14 +1,34 @@
 import "./AppPrincipal.css"
-import ContactesLlista from "../../../../../../Downloads/src/src/Components/ContactesList/ContactesLlista.tsx";
-import MissatgesChat from "../../../../../../Downloads/src/src/Components/MissatgesChat/MissatgesChat.tsx";
+import MissatgesChat from "../MissatgesChat/MissatgesChat.tsx";
+import ContactesLlista from "../ContactesList/ContactesLlista.tsx";
+import LoginForm from "../LoginForm/LoginForm.tsx";
+import {useState} from "react";
 function AppPrincipal(){
 
+    const [pagina, setPagina] = useState("login");
+    const [idActual, setIdActual] = useState(0);
+
+    function enviarMissatge(id: number){
+        setIdActual(id);
+    }
+
+    function onLoginSuccess(){
+        setPagina("inici");
+    }
+
     return(
-        <div id={"appPrincipal"}>
-            <div id={"conf"}></div>
-            <ContactesLlista></ContactesLlista>
-            <MissatgesChat></MissatgesChat>
-        </div>
+        <>
+            {pagina === "inici" && <div id={"appPrincipal"}>
+                <ContactesLlista contacteId={enviarMissatge}></ContactesLlista>
+                <MissatgesChat id={idActual}></MissatgesChat>
+            </div>}
+
+            {pagina === "login" &&
+                <LoginForm onLogin={onLoginSuccess}></LoginForm>
+            }
+        </>
+
+
     )
 }
 export default AppPrincipal
