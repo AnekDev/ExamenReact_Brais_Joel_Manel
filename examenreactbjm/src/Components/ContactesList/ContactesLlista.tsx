@@ -25,9 +25,9 @@ function ContactesLlista(prop:Props){
     }, [])
 
     return (
-        <div>
+        <div id="llistaContactes">
             {contacte.map((c, i) =>(
-                <div key={i}>
+                <div key={i} className="contacte">
                     <Contacte id={c.ID} username={c.username} contactePassar={enviar}></Contacte>
                 </div>
             ))}

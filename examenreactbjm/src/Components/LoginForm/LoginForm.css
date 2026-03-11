@@ -1,3 +1,72 @@
+Manel Daza Sánchez
+
+19:18 (fa 0 minuts)
+
+
+per a mi
+Sembla que aquest missatge està en anglès
+
+#appPrincipal{
+    height: 95vh;
+    min-height: 500px;
+    width: 97vw;
+    gap: 10px;
+    display: flex;
+
+}
+
+#conf{
+    grid-area: configuracions;
+    background-color: #7890A8;
+}
+
+
+
+
+
+#llistaContactes{
+    background-color: #181848;
+    grid-area: contactes;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    overflow-y: scroll;
+    scrollbar-color: aliceblue transparent;
+    scrollbar-width: thin;
+    border: 5px solid #000000;
+    border-radius: 5px;
+}
+.contacte{
+    min-height: 120px;
+    background-color: #304878;
+    border:  2px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 3em;
+    margin: 5px;
+    width: 100px;
+}
+
+button{
+    font-size: 1em;
+    padding: 10px;
+    color: #000000;
+    background-color: #f0a818;
+    border-radius: 100px;
+    border-color:#000000;
+}
+
+
+
+
+
 
 #login{
     height: 65vh;
@@ -39,7 +108,20 @@
     min-width: 400px;
 }
 #login > img{
-    max-height: 200px;
+    max-height: 100px;
     border-radius: 20px;
     min-height: 100px;
+}
+
+#login button{
+    font-size: 1em;
+}
+
+label{
+    width: 200px;
+}
+
+
+button{
+    border-color: #000000!important;
 }

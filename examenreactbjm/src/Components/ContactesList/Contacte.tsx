@@ -13,7 +13,6 @@ function Contacte(prop:prop){
         <div>
             <div>
                 <h1>{prop.username}</h1>
-                <h1>ID {prop.id}</h1>
                 <button onClick={canviarId}>Enviar Missatge</button>
             </div>
         </div>

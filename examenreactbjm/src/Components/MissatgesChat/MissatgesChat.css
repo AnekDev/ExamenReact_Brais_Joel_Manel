@@ -10,7 +10,6 @@
                         "wzone";
 }
 #writeField{
-    background-color: #7890A8;
     color: #000000;
 
     grid-area: wzone;
@@ -21,6 +20,7 @@
 #writeField > input{
     padding-left: 5px;
     font-size: 200%;
+    margin: 10px;
 }
 #writeField > button{
     color: #000000;
@@ -50,9 +50,13 @@
     background-color: #181848;
     min-width: 250px;
     padding:20px;
+    color: white;
 }
 
 button{
     color: #000000;
-    background-color: #f0a818;
+    background-color: #000000;
+    border-color: #000000;
 }
+
+

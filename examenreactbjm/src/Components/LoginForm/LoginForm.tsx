@@ -8,14 +8,14 @@ type Props = {
 function LoginForm({onLogin} :Props){
 
     const action = async (_prevState: unknown, formData: FormData) => {
-        const nomEscrit = formData.get("username") as string;
+        const nomEscrit = formData.get("nom") as string;
         const contrasenyaEscrita = formData.get("contrasenya") as string;
 
         const res = await axios.post("http://158.158.16.145:3000/login",
-            {nomEscrit, contrasenyaEscrita});
+            { username: nomEscrit, contrasenya:contrasenyaEscrita});
 
-        if (!res.data.error){
-            return {ok: true, missatge: "Username o contrasenya Incorrectes"};
+        if (res.data.error){
+            return {ok: false, missatge: "Username o contrasenya Incorrectes"};
         }
         setTimeout(() => {
             onLogin()
