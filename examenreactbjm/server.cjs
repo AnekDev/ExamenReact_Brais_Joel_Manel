@@ -43,7 +43,6 @@ app.get('/getAllUsuaris', function (req, res) {
             else{
                 return res.send({ error: false, data: results, message: 'Llista de usuaris' });
             }
-
         }
     );
 });
